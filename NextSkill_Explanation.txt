@@ -1,0 +1,45 @@
+Explanation Document for NextSkill Project
+
+1.  Overview This document explains the current structure, progress, and
+    limitations of the NextSkill platform so you can review the work
+    completed so far.
+
+2.  Language Courses
+
+-   The platform currently includes only English as an available
+    language course on the dashboard.
+-   The English course is not yet fully completed.
+-   A separate “languages” folder exists inside the NextSkill directory.
+    It is not yet connected to the main codebase, but the content inside
+    it works properly. We are working on integrating it with the rest of
+    the project during the upcoming week.
+-   Please review this folder separately and share your feedback.
+
+3.  Technical Skills
+
+-   All technical skills are functional except the Java course.
+-   The Java course is planned for completion next week.
+-   Some technical skill modules have missing content, and these will
+    also be completed next week.
+
+4.  Personalization
+
+-   The personalization feature is still under development.
+-   Additional logic and UI updates are being prepared.
+
+5.  Payment System
+
+-   The payment functionality has not been implemented yet.
+
+6.  Courses and Certificates Pages
+
+-   Both pages are currently in progress and will be completed after
+    finishing the main content modules.
+
+7.  Sign In and Sign Up
+
+-   Sign-in and sign-up features are fully functional.
+-   You can create an account and test the platform directly.
+
+Thank you for taking the time to review the project. Your feedback will
+help us improve the next development cycle.
