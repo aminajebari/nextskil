@@ -63,43 +63,85 @@ Lint (if ESLint is configured):
 ```powershell
 npm run lint
 ```
+# NextSkill
+
+A modern Next.js demo/landing project for an online learning platform UI. It showcases reusable React + TypeScript components, Tailwind CSS styling, and example course pages.
+
+## Quick overview
+
+- Framework: Next.js (App Router) in `app/`
+- Language: TypeScript
+- UI: React + Tailwind CSS
+- Components: reusable components live in the `components/` folder
+- Path alias: `@/*` mapped in `tsconfig.json`
+
+## Project structure (important files)
+
+- `app/` — Next.js App Router pages and layouts (`app/page.tsx`, `app/layout.tsx`)
+- `components/` — UI building blocks (`navigation.tsx`, `hero-section.tsx`, `courses-grid.tsx`, etc.)
+- `postcss.config.mjs` — PostCSS/Tailwind config
+- `tsconfig.json` — TypeScript configuration and `@/*` path alias
+- `.gitignore` — repository ignores (added)
+
+## Requirements
+
+- Node.js 18+ (recommended)
+- npm (or pnpm/yarn if preferred)
+
+## Setup & run
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start development server:
+
+```bash
+npm run dev
+```
+
+Build for production:
+
+```bash
+npm run build
+npm run start
+```
+
+If you encounter peer dependency errors, try:
+
+```bash
+npm install --legacy-peer-deps
+```
 
 ## Environment variables
 
-Create `.env.local` for local-only secrets (these are git-ignored). Example keys depend on integrations you add (analytics, API keys, etc.).
+Create a `.env.local` file for local secrets (this repo ignores `.env*` files). Example:
 
-## Path aliases
-
-This project uses the alias `@` to reference the repository root (e.g. `@/components/navigation`). The mapping is defined in `tsconfig.json` as:
-
-```json
-"paths": { "@/*": ["./*"] }
+```
+# .env.local
+NEXT_PUBLIC_API_URL=https://api.example.com
+DATABASE_URL=postgres://user:pass@localhost:5432/db
 ```
 
-If VS Code marks imports red, restart the TypeScript server: Command Palette → *TypeScript: Restart TS Server* or reload the window.
+## Notes & known issues
 
-## Known issues & troubleshooting
-
-- Peer dependency conflicts: One package (`vaul`) required React ≤18 while this project currently lists React 19 in `package.json`. If you hit installation errors, either:
-  - install with `--legacy-peer-deps`, or
-  - downgrade React/ReactDOM to an 18.x version (edit `package.json`), or
-  - remove/replace the conflicting package.
-
-- Tailwind / PostCSS editor warnings: The editor may show "Unknown at rule" for Tailwind custom at-rules (e.g. `@apply`, `@theme`). Install the Tailwind CSS IntelliSense extension in VS Code to reduce false-positive lint messages.
+- The repo currently lists React 19 in `package.json`. Some third-party packages may still require React 18 or lower; if you run into install-time peer conflicts consider using `--legacy-peer-deps` or pinning React to 18.
+- If Tailwind at-rules show editor warnings, install Tailwind CSS IntelliSense in VS Code.
 
 ## Contributing
 
-1. Fork the repo and create a feature branch: `git checkout -b feat/your-feature`
-2. Make changes, run `npm install` and test locally with `npm run dev`
-3. Commit with a clear message and open a Pull Request.
+1. Create a feature branch: `git checkout -b feat/your-feature`
+2. Make changes and test locally (`npm run dev`)
+3. Commit and open a PR
 
 ## License
 
-No license is included in this repository. Add a `LICENSE` file if you want to make the project open-source under a chosen license.
+No license file is included. Add a `LICENSE` if you want to publish under an open-source license.
 
----
+## Next steps I can help with
 
-If you'd like, I can also:
-- run the dev server here and confirm the app loads, or
-- add a minimal CONTRIBUTING.md and PR template, or
-- adjust `package.json` (for example to pin React to 18) and reinstall dependencies.
+- Run the dev server here and confirm the app loads
+- Add a minimal `CONTRIBUTING.md` and PR template
+- Adjust `package.json` to pin React to 18 and reinstall dependencies

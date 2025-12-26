@@ -43,3 +43,5 @@ export default function LessonContent({ lesson, onComplete, isComplete }: Lesson
     </div>
   )
 }
+
+export { LessonContent }

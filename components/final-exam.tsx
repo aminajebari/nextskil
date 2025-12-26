@@ -220,6 +220,8 @@ export default function FinalExam({ onComplete, completed }: FinalExamProps) {
   )
 }
 
+export { FinalExam }
+
 function Badge({ children, className }: { children: React.ReactNode; className?: string }) {
   return (
     <span

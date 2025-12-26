@@ -1,8 +1,7 @@
 "use client"
 
 import type React from "react"
-
-import { createClient } from "@/lib/supabase/client"
+import { signInUser } from "@/app/actions/auth-actions"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
@@ -23,20 +22,31 @@ export default function SignInPage() {
 
   const handleSignIn = async (e: React.FormEvent) => {
     e.preventDefault()
-    const supabase = createClient()
     setIsLoading(true)
     setError(null)
 
     try {
-      const { error } = await supabase.auth.signInWithPassword({
-        email,
-        password,
-      })
-      if (error) throw error
+      const result = await signInUser(email, password)
+
+      if (!result.success) {
+        throw new Error(result.error)
+      }
+
+      if (!result.data?.session) {
+        setError("Session not established. Please try again.")
+        return
+      }
+
       router.push("/dashboard")
       router.refresh()
     } catch (error: unknown) {
-      setError(error instanceof Error ? error.message : "An error occurred")
+      const errorMessage = error instanceof Error ? error.message : "An error occurred during signin"
+
+      if (errorMessage.includes("Invalid login credentials")) {
+        setError("Invalid email or password. If you haven't signed up yet, please create an account.")
+      } else {
+        setError(errorMessage)
+      }
     } finally {
       setIsLoading(false)
     }

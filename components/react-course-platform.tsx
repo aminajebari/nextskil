@@ -24,7 +24,7 @@ import { reactCourseData } from "@/lib/react-course-data"
 import LessonContent from "./lesson-content"
 import ModuleQuiz from "./module-quiz"
 import FinalExam from "./final-exam"
-import Certificate from "./certificate"
+import Certificate from "@/components/react/certificate" // Updated import
 import ExamplePracticeExam from "./example-practice-exam" // Changed from named import to default import
 import Link from "next/link"
 

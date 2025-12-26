@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180" fill="none">
+  <!-- Updated color scheme to blue and red gradient -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2563EB;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1E40AF;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <rect width="180" height="180" rx="37" fill="url(#bgGradient)" />
+  <path d="M50 130V50L90 90V50L130 90V130L90 90V130H50Z" fill="white" />
+  <!-- Changed star accent to red -->
+  <path d="M140 40L143 48L151 48L145 53L147 61L140 56L133 61L135 53L129 48L137 48L140 40Z" fill="#EF4444" />
+  <!-- Changed book icon accent to red -->
+  <rect x="30" y="145" width="20" height="3" rx="1.5" fill="#EF4444" opacity="0.8" />
+  <rect x="30" y="150" width="20" height="3" rx="1.5" fill="#EF4444" opacity="0.8" />
+  <rect x="30" y="155" width="20" height="3" rx="1.5" fill="#EF4444" opacity="0.8" />
+</svg>

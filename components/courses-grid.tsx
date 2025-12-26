@@ -7,75 +7,87 @@ export default function CoursesGrid() {
   const courses = [
     {
       id: 1,
-      title: "Complete English Mastery",
-      category: "Language",
+      title: "HTML & Web Development",
+      category: "Programming",
       level: "Beginner to Advanced",
       students: 12500,
-      hours: 48,
-      rating: 4.8,
+      hours: 24,
+      rating: 4.9,
       price: "$9/month",
-      instructor: "Sarah Johnson",
-      description: "Master English from basics to professional fluency",
+      instructor: "NextSkill Academy",
+      description: "Master HTML from basics to advanced concepts with hands-on projects",
+      image: "/html5-code-editor-web-development.jpg",
+      lessons: ["HTML Fundamentals", "Text and Formatting", "Links and Images"],
     },
     {
       id: 2,
-      title: "JavaScript Advanced Concepts",
+      title: "JavaScript Complete Course",
       category: "Programming",
       level: "Intermediate to Advanced",
       students: 8900,
       hours: 36,
       rating: 4.9,
       price: "$9/month",
-      instructor: "Mike Chen",
-      description: "Deep dive into modern JavaScript and ES6+",
+      instructor: "NextSkill Academy",
+      description: "Deep dive into modern JavaScript, ES6+, and asynchronous programming",
+      image: "/javascript-code-modern-programming.jpg",
+      lessons: ["JavaScript Basics", "Functions & Scope", "DOM Manipulation"],
     },
     {
       id: 3,
-      title: "French Conversation Pro",
-      category: "Language",
+      title: "React Fundamentals",
+      category: "Programming",
       level: "Intermediate",
       students: 6200,
-      hours: 32,
-      rating: 4.7,
+      hours: 28,
+      rating: 4.8,
       price: "$9/month",
-      instructor: "Marie Dubois",
-      description: "Become fluent in French through real conversations",
+      instructor: "NextSkill Academy",
+      description: "Build modern web applications with React and hooks",
+      image: "/react-components-modern-ui-development.jpg",
+      lessons: ["Introduction to React", "JSX Syntax", "Components and Props", "State Management with Hooks"],
     },
     {
       id: 4,
-      title: "Java Web Development",
-      category: "Programming",
-      level: "Beginner to Intermediate",
-      students: 5400,
-      hours: 40,
+      title: "English A2 to C1",
+      category: "Language",
+      level: "Beginner to Advanced",
+      students: 15400,
+      hours: 120,
       rating: 4.8,
       price: "$9/month",
-      instructor: "Kumar Rajesh",
-      description: "Build powerful web applications with Java",
+      instructor: "NextSkill Academy",
+      description: "Master English from beginner to advanced level with interactive lessons",
+      image: "/english-learning-books-conversation-modern-classro.jpg",
+      lessons: ["Greetings & Introductions", "Grammar Basics", "Conversation Skills"],
     },
     {
       id: 5,
-      title: "German Grammar Fundamentals",
+      title: "French Language Course",
       category: "Language",
-      level: "Beginner",
-      students: 4100,
-      hours: 28,
-      rating: 4.6,
+      level: "A2 to C1",
+      students: 7100,
+      hours: 100,
+      rating: 4.7,
       price: "$9/month",
-      instructor: "Hans Schmidt",
-      description: "Master German grammar with interactive lessons",
+      instructor: "NextSkill Academy",
+      description: "Become fluent in French through comprehensive lessons and practice",
+      image: "/french-language-paris-eiffel-tower-learning.jpg",
+      lessons: ["French Basics", "Common Phrases", "French Grammar"],
     },
     {
       id: 6,
-      title: "C++ Systems Programming",
+      title: "Python Programming",
       category: "Programming",
-      level: "Advanced",
-      students: 3800,
-      hours: 52,
+      level: "Beginner to Advanced",
+      students: 9800,
+      hours: 42,
       rating: 4.9,
       price: "$9/month",
-      instructor: "Alex Petrov",
-      description: "Advanced C++ for system and performance critical applications",
+      instructor: "NextSkill Academy",
+      description: "Learn Python programming from basics to advanced data structures",
+      image: "/python-programming-code-snake-logo.jpg",
+      lessons: ["Python Basics", "Data Structures", "Object-Oriented Programming"],
     },
   ]
 
@@ -93,9 +105,13 @@ export default function CoursesGrid() {
               key={course.id}
               className="bg-card rounded-lg overflow-hidden border border-border hover:shadow-xl transition-shadow duration-300 group"
             >
-              {/* Course Image Header */}
-              <div className={`h-40 bg-gradient-to-br from-primary to-blue-700 relative overflow-hidden`}>
-                <div className="absolute inset-0 opacity-0 group-hover:opacity-10 bg-white transition-opacity" />
+              <div className="h-48 relative overflow-hidden bg-muted">
+                <img
+                  src={course.image || "/placeholder.svg"}
+                  alt={course.title}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
               </div>
 
               {/* Course Content */}
@@ -117,6 +133,18 @@ export default function CoursesGrid() {
                 </div>
 
                 <p className="text-sm text-muted-foreground mb-4">{course.description}</p>
+
+                <div className="mb-4 pb-4 border-b border-border">
+                  <p className="text-xs font-semibold text-muted-foreground mb-2">What you'll learn:</p>
+                  <ul className="space-y-1">
+                    {course.lessons.slice(0, 3).map((lesson, idx) => (
+                      <li key={idx} className="text-xs text-muted-foreground flex items-start">
+                        <span className="mr-1">•</span>
+                        <span>{lesson}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
 
                 {/* Stats */}
                 <div className="space-y-3 mb-4 pb-4 border-b border-border">

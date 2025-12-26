@@ -24,9 +24,9 @@ export default function Certificate({ onClose, progress, preview = false }: Cert
 
   return (
     <div className="min-h-screen bg-background/95 backdrop-blur-sm flex items-center justify-center p-4">
-      <Card className="max-w-4xl w-full p-8 relative">
+      <Card className="max-w-4xl w-full p-8 relative border-4 border-yellow-400/30">
         {preview && (
-          <Badge className="absolute top-8 left-8 text-sm bg-primary/20 text-primary border-primary">
+          <Badge className="absolute top-8 left-8 text-sm bg-yellow-500/20 text-yellow-700 border-yellow-500">
             Preview Mode
           </Badge>
         )}
@@ -37,26 +37,26 @@ export default function Certificate({ onClose, progress, preview = false }: Cert
 
         <div className="text-center space-y-6 py-8">
           <div className="flex justify-center">
-            <div className="w-20 h-20 rounded-full bg-primary/10 flex items-center justify-center">
-              <Award className="h-12 w-12 text-primary" />
+            <div className="w-20 h-20 rounded-full bg-yellow-500/10 flex items-center justify-center">
+              <Award className="h-12 w-12 text-yellow-600" />
             </div>
           </div>
 
           <div className="space-y-2">
-            <h1 className="text-4xl font-bold text-primary">Certificate of Completion</h1>
-            <p className="text-muted-foreground">HTML Mastery Course</p>
+            <h1 className="text-4xl font-bold text-yellow-600">Certificate of Completion</h1>
+            <p className="text-muted-foreground">JavaScript Mastery Course</p>
           </div>
 
           <div className="py-8 space-y-4">
             <p className="text-lg">This certifies that</p>
-            <div className="py-4 border-b-2 border-primary mx-auto max-w-md">
+            <div className="py-4 border-b-2 border-yellow-600 mx-auto max-w-md">
               <p className="text-3xl font-bold">{preview ? "Your Name Here" : "Course Participant"}</p>
             </div>
             <p className="text-lg">has successfully completed the</p>
-            <p className="text-2xl font-semibold text-primary">Complete HTML Development Training</p>
+            <p className="text-2xl font-semibold text-yellow-600">Complete JavaScript Development Training</p>
             <p className="text-muted-foreground">
-              Demonstrating mastery of HTML fundamentals, semantic markup, forms, tables, multimedia, canvas API, and
-              modern web development practices
+              Demonstrating mastery of JavaScript fundamentals, ES6+ features, DOM manipulation, async programming,
+              object-oriented programming, and modern web development practices
             </p>
           </div>
 
@@ -81,7 +81,7 @@ export default function Certificate({ onClose, progress, preview = false }: Cert
 
           <div className="flex gap-4 justify-center pt-6">
             {!preview && (
-              <Button onClick={handleDownload} size="lg" className="gap-2">
+              <Button onClick={handleDownload} size="lg" className="gap-2 bg-yellow-600 hover:bg-yellow-700">
                 <Download className="h-4 w-4" />
                 Download Certificate
               </Button>
@@ -98,8 +98,8 @@ export default function Certificate({ onClose, progress, preview = false }: Cert
           )}
         </div>
 
-        <div className="absolute inset-0 border-8 border-primary/20 rounded-lg pointer-events-none" />
-        <div className="absolute inset-2 border-2 border-primary/10 rounded-lg pointer-events-none" />
+        <div className="absolute inset-0 border-8 border-yellow-500/20 rounded-lg pointer-events-none" />
+        <div className="absolute inset-2 border-2 border-yellow-500/10 rounded-lg pointer-events-none" />
       </Card>
     </div>
   )

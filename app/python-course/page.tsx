@@ -28,7 +28,7 @@ import { pythonCourseData } from "@/lib/python-course-data"
 import LessonContent from "@/components/lesson-content"
 import ModuleQuiz from "@/components/module-quiz"
 import FinalExam from "@/components/final-exam"
-import Certificate from "@/components/certificate"
+import Certificate from "@/components/python/certificate"
 import ExamplePracticeExam from "@/components/example-practice-exam"
 import { SubscriptionGate } from "@/components/subscription-gate"
 

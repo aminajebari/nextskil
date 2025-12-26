@@ -19,7 +19,7 @@ const coursesData = {
       students: 1234,
       rating: 4.8,
       description: "Master basic English grammar and sentence structure",
-      image: "/placeholder.svg?height=200&width=400",
+      image: "/colorful-abc-alphabet-letters-pronunciation-guide.jpg",
       link: "/english-beginner/lesson-1",
     },
     {
@@ -30,7 +30,7 @@ const coursesData = {
       students: 1234,
       rating: 4.8,
       description: "Master basic English grammar and sentence structure",
-      image: "/placeholder.svg?height=200&width=400",
+      image: "/people-shaking-hands-greeting-hello-conversation.jpg",
       link: "/english-beginner/lesson-2",
     },
     {
@@ -41,7 +41,7 @@ const coursesData = {
       students: 987,
       rating: 4.7,
       description: "Improve your speaking and listening skills",
-      image: "/placeholder.svg?height=200&width=400",
+      image: "/colorful-numbers-1-to-20-counting-blocks-education.jpg",
       link: "/english-beginner/lesson-3",
     },
     {
@@ -52,7 +52,7 @@ const coursesData = {
       students: 756,
       rating: 4.9,
       description: "Professional writing and communication skills",
-      image: "/placeholder.svg?height=200&width=400",
+      image: "/rainbow-colors-palette-paint-brushes-vibrant.jpg",
       link: "/english-beginner/lesson-4",
     },
     {
@@ -63,7 +63,7 @@ const coursesData = {
       students: 543,
       rating: 4.8,
       description: "Master business English and professional communication",
-      image: "/placeholder.svg?height=200&width=400",
+      image: "/cute-animals-zoo-wildlife-lion-elephant-giraffe.jpg",
       link: "/english-beginner/lesson-5",
     },
     {
@@ -74,7 +74,7 @@ const coursesData = {
       students: 1234,
       rating: 4.8,
       description: "Master basic English grammar and sentence structure",
-      image: "/placeholder.svg?height=200&width=400",
+      image: "/happy-family-portrait-parents-children-together.jpg",
       link: "/english-beginner/lesson-6",
     },
     {
@@ -85,7 +85,7 @@ const coursesData = {
       students: 1234,
       rating: 4.8,
       description: "Master basic English grammar and sentence structure",
-      image: "/placeholder.svg?height=200&width=400",
+      image: "/delicious-food-fruits-vegetables-healthy-meal-drin.jpg",
       link: "/english-beginner/lesson-7",
     },
     {
@@ -96,7 +96,7 @@ const coursesData = {
       students: 987,
       rating: 4.7,
       description: "Improve your speaking and listening skills",
-      image: "/placeholder.svg?height=200&width=400",
+      image: "/calendar-week-days-monday-to-sunday-planner.jpg",
       link: "/english-beginner/lesson-8",
     },
     {
@@ -107,7 +107,7 @@ const coursesData = {
       students: 756,
       rating: 4.9,
       description: "Professional writing and communication skills",
-      image: "/placeholder.svg?height=200&width=400",
+      image: "/four-seasons-spring-summer-autumn-winter-nature.jpg",
       link: "/english-beginner/lesson-9",
     },
     {
@@ -118,7 +118,7 @@ const coursesData = {
       students: 543,
       rating: 4.8,
       description: "Master business English and professional communication",
-      image: "/placeholder.svg?height=200&width=400",
+      image: "/grammar-book-present-tense-verb-conjugation-study.jpg",
       link: "/english-beginner/lesson-10",
     },
     {
@@ -129,7 +129,7 @@ const coursesData = {
       students: 1234,
       rating: 4.8,
       description: "Master basic English grammar and sentence structure",
-      image: "/placeholder.svg?height=200&width=400",
+      image: "/old-clock-history-timeline-past-events-yesterday.jpg",
       link: "/english-beginner/lesson-11",
     },
     {
@@ -140,7 +140,7 @@ const coursesData = {
       students: 1234,
       rating: 4.8,
       description: "Master basic English grammar and sentence structure",
-      image: "/placeholder.svg?height=200&width=400",
+      image: "/checkmark-completed-tasks-achievement-success.jpg",
       link: "/english-beginner/lesson-12",
     },
     {
@@ -151,7 +151,7 @@ const coursesData = {
       students: 987,
       rating: 4.7,
       description: "Improve your speaking and listening skills",
-      image: "/placeholder.svg?height=200&width=400",
+      image: "/futuristic-city-tomorrow-plans-crystal-ball-future.jpg",
       link: "/english-beginner/lesson-13",
     },
     {
@@ -162,7 +162,7 @@ const coursesData = {
       students: 756,
       rating: 4.9,
       description: "Professional writing and communication skills",
-      image: "/placeholder.svg?height=200&width=400",
+      image: "/decision-making-can-could-should-must-choices.jpg",
       link: "/english-beginner/lesson-14",
     },
     {
@@ -173,7 +173,7 @@ const coursesData = {
       students: 543,
       rating: 4.8,
       description: "Master business English and professional communication",
-      image: "/placeholder.svg?height=200&width=400",
+      image: "/comparison-chart-bigger-biggest-better-best-rankin.jpg",
       link: "/english-beginner/lesson-15",
     },
     {
@@ -184,7 +184,7 @@ const coursesData = {
       students: 1234,
       rating: 4.8,
       description: "Master basic English grammar and sentence structure",
-      image: "/placeholder.svg?height=200&width=400",
+      image: "/advanced-grammar-complex-sentences-conditional-clause.jpg",
       link: "/english-beginner/lesson-16",
     },
     {
@@ -195,7 +195,7 @@ const coursesData = {
       students: 1234,
       rating: 4.8,
       description: "Master basic English grammar and sentence structure",
-      image: "/placeholder.svg?height=200&width=400",
+      image: "/business-english-meeting-presentation-corporate.jpg",
       link: "/english-beginner/lesson-17",
     },
     {
@@ -206,7 +206,7 @@ const coursesData = {
       students: 987,
       rating: 4.7,
       description: "Improve your speaking and listening skills",
-      image: "/placeholder.svg?height=200&width=400",
+      image: "/academic-writing-research-paper-essay-thesis.jpg",
       link: "/english-beginner/lesson-18",
     },
     {
@@ -217,7 +217,7 @@ const coursesData = {
       students: 756,
       rating: 4.9,
       description: "Professional writing and communication skills",
-      image: "/placeholder.svg?height=200&width=400",
+      image: "/idioms-expressions-phrases-metaphors-sayings.jpg",
       link: "/english-beginner/lesson-19",
     },
     {
@@ -228,7 +228,7 @@ const coursesData = {
       students: 543,
       rating: 4.8,
       description: "Master business English and professional communication",
-      image: "/placeholder.svg?height=200&width=400",
+      image: "/literature-culture-books-shakespeare-library.jpg",
       link: "/english-beginner/lesson-20",
     },
   ],
@@ -241,7 +241,7 @@ const coursesData = {
       students: 892,
       rating: 4.6,
       description: "Start your French learning journey",
-      image: "/placeholder.svg?height=200&width=400",
+      image: "/french-eiffel-tower-bonjour-learning-basics.jpg",
       link: "/french/beginners",
     },
     {
@@ -252,7 +252,7 @@ const coursesData = {
       students: 654,
       rating: 4.7,
       description: "Build on your French foundation",
-      image: "/placeholder.svg?height=200&width=400",
+      image: "/french-cafe-conversation-paris-intermediate.jpg",
       link: "/french/intermediate",
     },
     {
@@ -263,7 +263,7 @@ const coursesData = {
       students: 432,
       rating: 4.8,
       description: "Speak French fluently and confidently",
-      image: "/placeholder.svg?height=200&width=400",
+      image: "/french-business-meeting-professional-conversation.jpg",
       link: "/french/advanced",
     },
     {
@@ -274,7 +274,7 @@ const coursesData = {
       students: 321,
       rating: 4.9,
       description: "Deep dive into French culture and literature",
-      image: "/placeholder.svg?height=200&width=400",
+      image: "/french-literature-books-culture-louvre-museum.jpg",
       link: "/french/culture",
     },
   ],
@@ -287,7 +287,7 @@ const coursesData = {
       students: 765,
       rating: 4.7,
       description: "Learn essential Italian phrases and grammar",
-      image: "/placeholder.svg?height=200&width=400",
+      image: "/italian-colosseum-ciao-basics-rome.jpg",
       link: "/italian/basics",
     },
     {
@@ -298,7 +298,7 @@ const coursesData = {
       students: 543,
       rating: 4.6,
       description: "Practice everyday Italian conversations",
-      image: "/placeholder.svg?height=200&width=400",
+      image: "/italian-pizza-restaurant-conversation-venice.jpg",
       link: "/italian/conversational",
     },
     {
@@ -309,7 +309,7 @@ const coursesData = {
       students: 432,
       rating: 4.8,
       description: "Navigate Italy like a local",
-      image: "/placeholder.svg?height=200&width=400",
+      image: "/italian-travel-map-florence-venice-suitcase.jpg",
       link: "/italian/travel",
     },
     {
@@ -320,7 +320,7 @@ const coursesData = {
       students: 234,
       rating: 4.9,
       description: "Master complex Italian grammar and expressions",
-      image: "/placeholder.svg?height=200&width=400",
+      image: "/italian-opera-theatre-advanced-language-grammar.jpg",
       link: "/italian/advanced",
     },
   ],
@@ -333,7 +333,7 @@ const coursesData = {
       students: 1432,
       rating: 4.8,
       description: "Start learning Spanish from scratch",
-      image: "/placeholder.svg?height=200&width=400",
+      image: "/spanish-flamenco-dancer-hola-basics-madrid.jpg",
       link: "/spanish/fundamentals",
     },
     {
@@ -344,7 +344,7 @@ const coursesData = {
       students: 1098,
       rating: 4.7,
       description: "Improve your Spanish speaking skills",
-      image: "/placeholder.svg?height=200&width=400",
+      image: "/spanish-tapas-bar-conversation-barcelona.jpg",
       link: "/spanish/conversation",
     },
     {
@@ -355,7 +355,7 @@ const coursesData = {
       students: 876,
       rating: 4.9,
       description: "Master complex Spanish structures",
-      image: "/placeholder.svg?height=200&width=400",
+      image: "/spanish-grammar-book-subjunctive-tenses.jpg",
       link: "/spanish/grammar",
     },
     {
@@ -366,7 +366,7 @@ const coursesData = {
       students: 543,
       rating: 4.8,
       description: "Business Spanish and professional communication",
-      image: "/placeholder.svg?height=200&width=400",
+      image: "/spanish-business-office-professional-meeting.jpg",
       link: "/spanish/professional",
     },
   ],
@@ -379,7 +379,7 @@ const coursesData = {
       students: 2345,
       rating: 4.9,
       description: "Learn the fundamentals of HTML",
-      image: "/placeholder.svg?height=200&width=400",
+      image: "/html5-logo-tags-code-structure-basics.jpg",
       link: "/html/basics",
     },
     {
@@ -390,7 +390,7 @@ const coursesData = {
       students: 1876,
       rating: 4.8,
       description: "Build beautiful web pages",
-      image: "/placeholder.svg?height=200&width=400",
+      image: "/html-css-webpage-design-layout-colorful.jpg",
       link: "/html/css-integration",
     },
     {
@@ -401,7 +401,7 @@ const coursesData = {
       students: 987,
       rating: 4.9,
       description: "Master modern HTML5 features",
-      image: "/placeholder.svg?height=200&width=400",
+      image: "/html5-semantic-tags-canvas-video-audio-modern.jpg",
       link: "/html/advanced",
     },
   ],
@@ -414,7 +414,7 @@ const coursesData = {
       students: 1567,
       rating: 4.8,
       description: "Learn the fundamentals of CSS",
-      image: "/placeholder.svg?height=200&width=400",
+      image: "/css3-logo-styling-colors-fonts-basics.jpg",
       link: "/css/basics",
     },
     {
@@ -425,7 +425,7 @@ const coursesData = {
       students: 1234,
       rating: 4.9,
       description: "Master layout techniques with Flexbox and Grid",
-      image: "/placeholder.svg?height=200&width=400",
+      image: "/css-flexbox-grid-layout-responsive-design.jpg",
       link: "/css/layout",
     },
     {
@@ -436,7 +436,7 @@ const coursesData = {
       students: 876,
       rating: 4.9,
       description: "Create stunning animations with CSS",
-      image: "/placeholder.svg?height=200&width=400",
+      image: "/css-animations-transitions-keyframes-motion.jpg",
       link: "/css/animations",
     },
   ],
@@ -449,7 +449,7 @@ const coursesData = {
       students: 1654,
       rating: 4.7,
       description: "Introduction to C++ programming",
-      image: "/placeholder.svg?height=200&width=400",
+      image: "/cpp-logo-code-syntax-programming-basics.jpg",
       link: "/cpp/basics",
     },
     {
@@ -460,7 +460,7 @@ const coursesData = {
       students: 1234,
       rating: 4.8,
       description: "Master OOP concepts in C++",
-      image: "/placeholder.svg?height=200&width=400",
+      image: "/cpp-classes-objects-inheritance-polymorphism.jpg",
       link: "/cpp/oop",
     },
     {
@@ -471,7 +471,7 @@ const coursesData = {
       students: 765,
       rating: 4.9,
       description: "Advanced C++ techniques and Standard Template Library",
-      image: "/placeholder.svg?height=200&width=400",
+      image: "/cpp-stl-vectors-algorithms-templates-advanced.jpg",
       link: "/cpp/advanced",
     },
   ],
@@ -484,7 +484,7 @@ const coursesData = {
       students: 2987,
       rating: 4.8,
       description: "Start your Java programming journey",
-      image: "/placeholder.svg?height=200&width=400",
+      image: "/java-coffee-cup-logo-code-basics.jpg",
       link: "/java/fundamentals",
     },
     {
@@ -495,7 +495,7 @@ const coursesData = {
       students: 2345,
       rating: 4.9,
       description: "Master Java OOP principles",
-      image: "/placeholder.svg?height=200&width=400",
+      image: "/java-classes-interfaces-abstract-oop.jpg",
       link: "/java/oop",
     },
     {
@@ -506,7 +506,7 @@ const coursesData = {
       students: 1543,
       rating: 4.9,
       description: "Enterprise Java and advanced frameworks",
-      image: "/placeholder.svg?height=200&width=400",
+      image: "/java-spring-framework-enterprise-microservices.jpg",
       link: "/java/advanced",
     },
   ],
@@ -519,7 +519,7 @@ const coursesData = {
       students: 1876,
       rating: 4.7,
       description: "Learn C# from scratch",
-      image: "/placeholder.svg?height=200&width=400",
+      image: "/csharp-logo-dotnet-code-syntax-basics.jpg",
       link: "/csharp/basics",
     },
     {
@@ -530,7 +530,7 @@ const coursesData = {
       students: 1432,
       rating: 4.8,
       description: "Build applications with .NET",
-      image: "/placeholder.svg?height=200&width=400",
+      image: "/csharp-dotnet-framework-visual-studio-apps.jpg",
       link: "/csharp/dotnet",
     },
     {
@@ -541,7 +541,7 @@ const coursesData = {
       students: 987,
       rating: 4.9,
       description: "Master C# and enterprise development",
-      image: "/placeholder.svg?height=200&width=400",
+      image: "/csharp-async-linq-entity-framework-advanced.jpg",
       link: "/csharp/advanced",
     },
   ],
@@ -554,7 +554,7 @@ const coursesData = {
       students: 3456,
       rating: 4.9,
       description: "Learn Python from scratch",
-      image: "/placeholder.svg?height=200&width=400",
+      image: "/python-snake-logo-code-syntax-basics.jpg",
       link: "/python/fundamentals",
     },
     {
@@ -565,7 +565,7 @@ const coursesData = {
       students: 2543,
       rating: 4.8,
       description: "Master Python data structures",
-      image: "/placeholder.svg?height=200&width=400",
+      image: "/python-lists-dictionaries-data-structures.jpg",
       link: "/python/datastructures",
     },
     {
@@ -576,7 +576,7 @@ const coursesData = {
       students: 1876,
       rating: 4.9,
       description: "Expert-level Python techniques",
-      image: "/placeholder.svg?height=200&width=400",
+      image: "/python-pandas-numpy-machine-learning-ai.jpg",
       link: "/python/advanced",
     },
   ],
@@ -589,7 +589,7 @@ const coursesData = {
       students: 4123,
       rating: 4.9,
       description: "Learn React from scratch",
-      image: "/placeholder.svg?height=200&width=400",
+      image: "/react-logo-components-jsx-hooks-basics.jpg",
       link: "/react/fundamentals",
     },
     {
@@ -600,7 +600,7 @@ const coursesData = {
       students: 3245,
       rating: 4.8,
       description: "Master React hooks and patterns",
-      image: "/placeholder.svg?height=200&width=400",
+      image: "/react-hooks-context-patterns-state-management.jpg",
       link: "/react/advanced",
     },
     {
@@ -611,7 +611,7 @@ const coursesData = {
       students: 2134,
       rating: 4.9,
       description: "Expert-level React development",
-      image: "/placeholder.svg?height=200&width=400",
+      image: "/react-performance-optimization-memo-lazy-loading.jpg",
       link: "/react/optimization",
     },
   ],
@@ -624,7 +624,7 @@ const coursesData = {
       students: 5234,
       rating: 4.9,
       description: "Learn JavaScript from scratch - variables, functions, and control flow",
-      image: "/javascript-code-fundamentals.jpg",
+      image: "/javascript-logo-code-variables-functions-basics.jpg",
       link: "/javascript-course",
     },
     {
@@ -635,7 +635,7 @@ const coursesData = {
       students: 3876,
       rating: 4.8,
       description: "Master closures, async/await, and modern ES6+ features",
-      image: "/advanced-javascript-concepts.jpg",
+      image: "/javascript-es6-async-await-promises-modern.jpg",
       link: "/javascript-course",
     },
     {
@@ -646,7 +646,7 @@ const coursesData = {
       students: 2543,
       rating: 4.9,
       description: "Expert-level DOM manipulation and interactive web development",
-      image: "/javascript-dom-manipulation.jpg",
+      image: "/javascript-dom-manipulation-events-interactive.jpg",
       link: "/javascript-course",
     },
   ],

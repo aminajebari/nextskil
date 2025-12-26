@@ -1,19 +1,15 @@
-'use client'
+"use client"
 
 import { useState, useEffect } from "react"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Progress } from "@/components/ui/progress"
-import { Badge } from "@/components/ui/badge"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { ScrollArea } from "@/components/ui/scroll-area"
-import { CheckCircle2, Circle, PlayCircle, BookOpen, Award, ChevronRight, Palette, Eye, Lock, X, ArrowLeft } from 'lucide-react'
-import Link from 'next/link'
+import { CheckCircle2, PlayCircle, Award, ChevronRight, Palette, Eye, Lock, X, ArrowLeft } from "lucide-react"
+import Link from "next/link"
 import { courseData } from "@/lib/css-course-data"
 import LessonContent from "./lesson-content"
 import ModuleQuiz from "./module-quiz"
-import FinalExam from "./final-exam"
-import Certificate from "./certificate"
+import Certificate from "@/components/css/certificate"
 import ExamplePracticeExam from "./example-practice-exam"
 
 export default function CSSCoursePlatform() {
@@ -21,7 +17,7 @@ export default function CSSCoursePlatform() {
   const [selectedLesson, setSelectedLesson] = useState(0)
   const [activeTab, setActiveTab] = useState("lesson")
   const [expandedModules, setExpandedModules] = useState<Set<number>>(
-    new Set(Array.from({ length: courseData.modules.length }, (_, i) => i))
+    new Set(Array.from({ length: courseData.modules.length }, (_, i) => i)),
   )
   const [completedLessons, setCompletedLessons] = useState<Set<string>>(new Set())
   const [completedQuizzes, setCompletedQuizzes] = useState<Set<number>>(new Set())
@@ -141,7 +137,9 @@ export default function CSSCoursePlatform() {
           <div className="mt-4">
             <Progress value={progress} className="h-2 [&>div]:bg-primary" />
             <div className="flex items-center justify-between mt-2 text-sm">
-              <span className="text-muted-foreground">{completedLessons.size} of {totalLessons} lessons</span>
+              <span className="text-muted-foreground">
+                {completedLessons.size} of {totalLessons} lessons
+              </span>
               <span className="font-semibold text-primary">{Math.round(progress)}% Complete</span>
             </div>
           </div>
@@ -166,11 +164,11 @@ export default function CSSCoursePlatform() {
                         <h3 className="font-semibold text-slate-900 dark:text-white mb-1">
                           Module {moduleIdx + 1}: {module.title}
                         </h3>
-                        <p className="text-xs text-slate-600 dark:text-slate-400">
-                          {module.lessons.length} lessons
-                        </p>
+                        <p className="text-xs text-slate-600 dark:text-slate-400">{module.lessons.length} lessons</p>
                       </div>
-                      <ChevronRight className={`h-5 w-5 transition-transform ${expandedModules.has(moduleIdx) ? 'rotate-180' : ''}`} />
+                      <ChevronRight
+                        className={`h-5 w-5 transition-transform ${expandedModules.has(moduleIdx) ? "rotate-180" : ""}`}
+                      />
                     </button>
 
                     {expandedModules.has(moduleIdx) && (
@@ -182,7 +180,9 @@ export default function CSSCoursePlatform() {
                               key={lesson.id}
                               onClick={() => setSelectedLesson(lessonIdx)}
                               className={`w-full text-left p-2 rounded text-sm transition-colors ${
-                                isComplete ? 'bg-green-100 dark:bg-green-900/30' : 'hover:bg-slate-200 dark:hover:bg-slate-800'
+                                isComplete
+                                  ? "bg-green-100 dark:bg-green-900/30"
+                                  : "hover:bg-slate-200 dark:hover:bg-slate-800"
                               }`}
                             >
                               <div className="flex items-center gap-2">
@@ -191,7 +191,11 @@ export default function CSSCoursePlatform() {
                                 ) : (
                                   <PlayCircle className="h-4 w-4 text-pink-600 flex-shrink-0" />
                                 )}
-                                <span className={isComplete ? 'line-through text-slate-600' : 'text-slate-900 dark:text-white'}>
+                                <span
+                                  className={
+                                    isComplete ? "line-through text-slate-600" : "text-slate-900 dark:text-white"
+                                  }
+                                >
                                   {lesson.title}
                                 </span>
                               </div>
@@ -219,11 +223,7 @@ export default function CSSCoursePlatform() {
                       >
                         🎓 Final Exam
                       </Button>
-                      <Button
-                        onClick={() => setShowCertificatePreview(true)}
-                        variant="outline"
-                        className="w-full"
-                      >
+                      <Button onClick={() => setShowCertificatePreview(true)} variant="outline" className="w-full">
                         👁️ Preview Certificate
                       </Button>
                     </>
@@ -244,10 +244,7 @@ export default function CSSCoursePlatform() {
                 {selectedLesson === -2 ? (
                   <Certificate courseName="CSS & Styling" preview={true} />
                 ) : selectedLesson === -1 ? (
-                  <ModuleQuiz
-                    moduleId={selectedModule}
-                    onComplete={() => markQuizComplete(selectedModule)}
-                  />
+                  <ModuleQuiz moduleId={selectedModule} onComplete={() => markQuizComplete(selectedModule)} />
                 ) : (
                   <LessonContent
                     lesson={courseData.modules[selectedModule].lessons[selectedLesson]}

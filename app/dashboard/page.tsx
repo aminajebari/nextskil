@@ -1,9 +1,10 @@
-import { redirect } from 'next/navigation'
+import { redirect } from "next/navigation"
 import { createClient } from "@/lib/supabase/server"
 import Navigation from "@/components/navigation"
 import Footer from "@/components/footer"
-import { BookOpen, Award, TrendingUp, Clock, Calendar, GraduationCap } from 'lucide-react'
-import Link from 'next/link'
+import { BookOpen, Award, TrendingUp, Clock } from "lucide-react"
+import Link from "next/link"
+import { getDashboardStats } from "@/lib/progress-tracker"
 
 export default async function DashboardPage() {
   const supabase = await createClient()
@@ -17,19 +18,19 @@ export default async function DashboardPage() {
     redirect("/auth/signin")
   }
 
-  const { data: profile } = await supabase
-    .from("profiles")
-    .select("*")
-    .eq("id", user.id)
-    .single()
+  const { data: profile } = await supabase.from("profiles").select("*").eq("id", user.id).single()
 
   const userName = profile?.full_name || user.email?.split("@")[0] || "Student"
   const isStudent = profile?.is_student || false
 
+  const stats = await getDashboardStats(user.id)
+  const totalHours = Math.floor(stats.totalTimeMinutes / 60)
+  const remainingMinutes = stats.totalTimeMinutes % 60
+
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
-      
+
       <div className="bg-gradient-to-br from-primary/10 via-secondary/5 to-background border-b border-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="flex items-center gap-4 mb-4">
@@ -41,7 +42,7 @@ export default async function DashboardPage() {
               <p className="text-muted-foreground mt-1">Continue your learning journey</p>
             </div>
           </div>
-          
+
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
             <div className="bg-white rounded-lg p-4 border border-border">
               <div className="flex items-center gap-3">
@@ -49,43 +50,45 @@ export default async function DashboardPage() {
                   <BookOpen className="text-primary" size={24} />
                 </div>
                 <div>
-                  <p className="text-2xl font-bold text-foreground">0</p>
+                  <p className="text-2xl font-bold text-foreground">{stats.totalCourses}</p>
                   <p className="text-sm text-muted-foreground">Courses</p>
                 </div>
               </div>
             </div>
-            
+
             <div className="bg-white rounded-lg p-4 border border-border">
               <div className="flex items-center gap-3">
                 <div className="p-2 bg-secondary/10 rounded-lg">
                   <Award className="text-secondary" size={24} />
                 </div>
                 <div>
-                  <p className="text-2xl font-bold text-foreground">0</p>
+                  <p className="text-2xl font-bold text-foreground">{stats.certificates}</p>
                   <p className="text-sm text-muted-foreground">Certificates</p>
                 </div>
               </div>
             </div>
-            
+
             <div className="bg-white rounded-lg p-4 border border-border">
               <div className="flex items-center gap-3">
                 <div className="p-2 bg-primary/10 rounded-lg">
                   <Clock className="text-primary" size={24} />
                 </div>
                 <div>
-                  <p className="text-2xl font-bold text-foreground">0h</p>
+                  <p className="text-2xl font-bold text-foreground">
+                    {totalHours}h {remainingMinutes > 0 && `${remainingMinutes}m`}
+                  </p>
                   <p className="text-sm text-muted-foreground">Learning Time</p>
                 </div>
               </div>
             </div>
-            
+
             <div className="bg-white rounded-lg p-4 border border-border">
               <div className="flex items-center gap-3">
                 <div className="p-2 bg-secondary/10 rounded-lg">
                   <TrendingUp className="text-secondary" size={24} />
                 </div>
                 <div>
-                  <p className="text-2xl font-bold text-foreground">0%</p>
+                  <p className="text-2xl font-bold text-foreground">{stats.averageProgress}%</p>
                   <p className="text-sm text-muted-foreground">Progress</p>
                 </div>
               </div>
@@ -146,7 +149,10 @@ export default async function DashboardPage() {
                   { title: "JavaScript Fundamentals", category: "Programming", duration: "8 hours", level: "Beginner" },
                   { title: "French for Beginners", category: "Language", duration: "12 hours", level: "Beginner" },
                 ].map((course, idx) => (
-                  <div key={idx} className="bg-white border border-border rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
+                  <div
+                    key={idx}
+                    className="bg-white border border-border rounded-lg overflow-hidden hover:shadow-lg transition-shadow"
+                  >
                     <div className="h-40 bg-gradient-to-br from-primary/20 to-secondary/20" />
                     <div className="p-4">
                       <span className="text-xs font-semibold text-secondary">{course.category}</span>
@@ -202,7 +208,7 @@ export default async function DashboardPage() {
               <h3 className="text-lg font-semibold mb-4">This Week's Goals</h3>
               <div className="space-y-3">
                 <div className="flex items-center gap-3">
-                  <Calendar className="text-primary" size={20} />
+                  <Clock className="text-primary" size={20} />
                   <div className="flex-1">
                     <p className="text-sm font-medium">Study 5 hours</p>
                     <div className="w-full bg-muted rounded-full h-2 mt-1">
@@ -211,7 +217,7 @@ export default async function DashboardPage() {
                   </div>
                 </div>
                 <div className="flex items-center gap-3">
-                  <GraduationCap className="text-secondary" size={20} />
+                  <BookOpen className="text-secondary" size={20} />
                   <div className="flex-1">
                     <p className="text-sm font-medium">Complete 2 lessons</p>
                     <div className="w-full bg-muted rounded-full h-2 mt-1">

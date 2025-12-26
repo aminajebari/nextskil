@@ -10,7 +10,14 @@ const _geistMono = Geist_Mono({ subsets: ["latin"] })
 export const metadata: Metadata = {
   title: "NextSkill - Learn Languages & Programming",
   description: "Master new skills with NextSkill - courses in languages and programming",
-  generator: "v0.app",
+  
+  icons: {
+    icon: [
+      { url: "/icon.png", type: "image/png" },
+      { url: "/favicon.ico", sizes: "any" },
+    ],
+    apple: "/apple-icon.png",
+  },
 }
 
 export default function RootLayout({

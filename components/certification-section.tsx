@@ -1,5 +1,5 @@
-import Link from 'next/link'
-import Image from 'next/image'
+import Link from "next/link"
+import Image from "next/image"
 
 export default function CertificationSection() {
   return (
@@ -7,12 +7,7 @@ export default function CertificationSection() {
       {/* Background pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute bottom-0 right-0 w-1/2 h-full">
-          <Image
-            src="/abstract-tech-pattern-background.jpg"
-            alt=""
-            fill
-            className="object-cover"
-          />
+          <Image src="/abstract-tech-pattern-background.jpg" alt="" fill className="object-cover" />
         </div>
       </div>
 
@@ -50,7 +45,7 @@ export default function CertificationSection() {
 
         <div className="text-center">
           <Link
-            href="/certifications"
+            href="/certificates"
             className="inline-block bg-secondary hover:bg-secondary/90 text-white px-10 py-4 rounded-full font-semibold transition-colors text-lg"
           >
             View All Certifications

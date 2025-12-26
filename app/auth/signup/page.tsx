@@ -50,12 +50,15 @@ export default function SignUpPage() {
 
     try {
       const { data: authData, error: signUpError } = await supabase.auth.signUp({
-        email,
+        email: email.trim(),
         password,
         options: {
-          emailRedirectTo: process.env.NEXT_PUBLIC_DEV_SUPABASE_REDIRECT_URL || `${window.location.origin}/payment`,
           data: {
             full_name: fullName,
+            birth_date: birthDate || null,
+            gender: gender || null,
+            is_student: isStudent,
+            school: isStudent ? school : null,
             has_paid: false,
           },
         },
@@ -64,24 +67,38 @@ export default function SignUpPage() {
       if (signUpError) throw signUpError
 
       if (authData.user) {
-        const { error: profileError } = await supabase
+        await new Promise((resolve) => setTimeout(resolve, 500))
+
+        const { data: profile, error: profileError } = await supabase
           .from("profiles")
-          .update({
+          .select("id")
+          .eq("id", authData.user.id)
+          .maybeSingle()
+
+        if (profileError) {
+          console.error("Profile check error:", profileError)
+        }
+
+        if (!profile) {
+          const { error: insertError } = await supabase.from("profiles").insert({
+            id: authData.user.id,
+            full_name: fullName,
             birth_date: birthDate || null,
             gender: gender || null,
             is_student: isStudent,
             school: isStudent ? school : null,
           })
-          .eq("id", authData.user.id)
-
-        if (profileError) {
-          console.error("Profile update error:", profileError)
+          if (insertError) {
+            console.error("Manual profile creation error:", insertError)
+          }
         }
-      }
 
-      router.push("/payment")
+        router.push("/payment")
+      }
     } catch (error: unknown) {
-      setError(error instanceof Error ? error.message : "An error occurred")
+      const errorMessage = error instanceof Error ? error.message : "An error occurred during signup"
+      console.error("Signup error:", errorMessage)
+      setError(errorMessage)
     } finally {
       setIsLoading(false)
     }

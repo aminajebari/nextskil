@@ -10,10 +10,18 @@ export const pythonCourseData = {
           description: "Get started with Python programming language",
           content: (
             <div className="space-y-6">
+              <div className="relative h-64 w-full rounded-lg overflow-hidden mb-6">
+                <img
+                  src="/python-programming-language-logo-code.jpg"
+                  alt="Python Programming Language"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+
               <div>
                 <h3 className="text-2xl font-semibold mb-4">What is Python?</h3>
                 <p className="leading-relaxed">
-                  Python is a high-level, interpreted programming language known for its simplicity and readability. 
+                  Python is a high-level, interpreted programming language known for its simplicity and readability.
                   It's widely used in web development, data science, artificial intelligence, and automation.
                 </p>
               </div>
@@ -34,6 +42,14 @@ export const pythonCourseData = {
           description: "Understanding Python variables and basic data types",
           content: (
             <div className="space-y-6">
+              <div className="relative h-64 w-full rounded-lg overflow-hidden mb-6">
+                <img
+                  src="/python-variables-data-types-syntax.jpg"
+                  alt="Python Variables and Data Types"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+
               <div>
                 <h3 className="text-2xl font-semibold mb-4">Variables in Python</h3>
                 <p className="leading-relaxed mb-4">
@@ -50,10 +66,18 @@ is_student = True`}</code>
               <div>
                 <h4 className="text-xl font-semibold mb-3">Basic Data Types</h4>
                 <ul className="list-disc pl-6 space-y-2">
-                  <li><strong>str</strong> - String (text)</li>
-                  <li><strong>int</strong> - Integer (whole numbers)</li>
-                  <li><strong>float</strong> - Floating point number (decimals)</li>
-                  <li><strong>bool</strong> - Boolean (True/False)</li>
+                  <li>
+                    <strong>str</strong> - String (text)
+                  </li>
+                  <li>
+                    <strong>int</strong> - Integer (whole numbers)
+                  </li>
+                  <li>
+                    <strong>float</strong> - Floating point number (decimals)
+                  </li>
+                  <li>
+                    <strong>bool</strong> - Boolean (True/False)
+                  </li>
                 </ul>
               </div>
             </div>
@@ -83,6 +107,14 @@ is_student = True`}</code>
           description: "Learn if, elif, and else statements",
           content: (
             <div className="space-y-6">
+              <div className="relative h-64 w-full rounded-lg overflow-hidden mb-6">
+                <img
+                  src="/python-conditional-statements-if-else-flow.jpg"
+                  alt="Python Conditional Statements"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+
               <div>
                 <h3 className="text-2xl font-semibold mb-4">If Statements</h3>
                 <pre className="bg-muted p-4 rounded-lg overflow-x-auto">
@@ -104,6 +136,14 @@ else:
           description: "Understanding for and while loops",
           content: (
             <div className="space-y-6">
+              <div className="relative h-64 w-full rounded-lg overflow-hidden mb-6">
+                <img
+                  src="/python-loops-iteration-for-while.jpg"
+                  alt="Python Loops and Iteration"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+
               <div>
                 <h3 className="text-2xl font-semibold mb-4">For Loops</h3>
                 <pre className="bg-muted p-4 rounded-lg overflow-x-auto">
@@ -142,6 +182,14 @@ for fruit in fruits:
           description: "Working with ordered collections",
           content: (
             <div className="space-y-6">
+              <div className="relative h-64 w-full rounded-lg overflow-hidden mb-6">
+                <img
+                  src="/python-lists-arrays-data-structures.jpg"
+                  alt="Python Lists and Data Structures"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+
               <div>
                 <h3 className="text-2xl font-semibold mb-4">Python Lists</h3>
                 <pre className="bg-muted p-4 rounded-lg overflow-x-auto">
@@ -167,6 +215,14 @@ fruits.sort()  # Sorts the list`}</code>
           description: "Key-value pair data structures",
           content: (
             <div className="space-y-6">
+              <div className="relative h-64 w-full rounded-lg overflow-hidden mb-6">
+                <img
+                  src="/python-dictionaries-key-value-pairs.jpg"
+                  alt="Python Dictionaries"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+
               <div>
                 <h3 className="text-2xl font-semibold mb-4">Python Dictionaries</h3>
                 <pre className="bg-muted p-4 rounded-lg overflow-x-auto">
@@ -215,6 +271,14 @@ person.values()  # Get all values`}</code>
           description: "Create reusable code blocks",
           content: (
             <div className="space-y-6">
+              <div className="relative h-64 w-full rounded-lg overflow-hidden mb-6">
+                <img
+                  src="/python-functions-def-parameters-return.jpg"
+                  alt="Python Functions"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+
               <div>
                 <h3 className="text-2xl font-semibold mb-4">Function Basics</h3>
                 <pre className="bg-muted p-4 rounded-lg overflow-x-auto">
@@ -250,4 +314,4 @@ result2 = power(5, 3)  # 125`}</code>
       ],
     },
   ],
-};
+}
